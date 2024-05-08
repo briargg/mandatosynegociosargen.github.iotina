@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Estilos CSS aquí */
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(126, 218, 167, 0.575); /* Fondo transparente */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        z-index: 10;
+      }
+
+      
+      .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 100vh;
+        width: 80%; /* Ancho del menú */
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco transparente */
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 9;
+      }
+
+      .nav-list.active {
+        transform: translateX(0);
+      }
+
+      .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0 20px;
+        cursor: pointer;
+        z-index: 11; /* Asegurar que esté sobre el menú desplegable */
+      }
+
+      .menu-toggle i {
+        color: #fff;
+        font-size: 1.5rem;
+      }
+
+      .nav-list li {
+        margin-bottom: 20px;
+      }
+
+      .nav-list a {
+        color: #333;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .nav-list a:hover {
+        color: rgba(255, 81, 0, 0.993);
+      }
+
+      @media screen and (min-width: 768px) {
+        .nav {
+          justify-content: flex-end;
+        }
+
+        .nav-list {
+          flex-direction: row;
+          position: relative;
+          height: auto;
+          width: auto;
+          background-color: transparent;
+          transform: none; /* Eliminar transformación */
+        }
+
+        .menu-toggle {
+          display: none;
+        }
+
+        .nav-list li {
+          margin: 0 15px;
+        }
+      }
+    </style>
+</head>
+<body>
+    <!-- START NAV -->
+
+    <nav id="navbar" class="nav">
+      <div class="logo">
+        
+      </div>
+      <div class="menu-toggle">&#9776;</div> <!-- Icono de menú desplegable para dispositivos móviles -->
+      <ul class="nav-list">
+        <li>
+          <a href="#welcome-section">Quienes somos</a>
+        </li>
+        <li>
+          <a href="#projects">proyectos</a>
+        </li>
+        <li>
+          <a href="#contact">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+
+<video autoplay loop muted>
+        <source src="imagenes/3129671-uhd_3840_2160_30fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- END NAV -->
+
+    <!-- START WELCOME SECTION -->
+
+    <section id="welcome-section" class="welcome-section">
+      <div class="image-container">
+          <img src="imagenes/madnatos.png" alt="Descripción de la imagen">
+          <h1></h1>
+      </div>
+      <p>en construcción</p>
+      <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              document.querySelector('.image-container').classList.add('show');
+              console.log('El DOM está cargado.');
+          });
+      </script>
+  </section>
+
+  </section>
+  
+
+    <!-- END WELCOME SECTION -->
+
+    <!-- START PROJECTS SECTION -->
+
+    <section id="projects" class="projects-section">
+      <h2 class="projects-section-header"></h2>
+
+      <div class="projects-grid">
+        <!-- Tus proyectos aquí -->
+      </div>
+
+      <a href="" class="btn btn-show-all" target="_blank">Show all<i class="fas fa-chevron-right"></i></a>
+    </section>
+
+    <!-- END PROJECTS SECTION -->
+
+    <!-- START CONTACT SECTION -->
+
+    <section id="contact" class="contact-section">
+      <div class="contact-section-header">
+        <h2></h2>
+        <p></p>
+      </div>
+      <div class="contact-links">
+        <!-- Tus enlaces de contacto aquí -->
+      </div>
+    </section>
+
+    <!-- END CONTACT SECTION -->
+
+    <!-- START FOOTER SECTION -->
+
+    <footer>
+      <p>
+        **.
+      </p>
+      <p>
+        &copy; 
+        <a href="/" target="_blank"> <i class="fab fa-free-code-camp"></i></a>
+      </p>
+    </footer>
+
+    <!-- END FOOTER SECTION -->
+    
+    <script>
+      // JavaScript aquí
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-list');
+
+        menuToggle.addEventListener('click', () => {
+          navList.classList.toggle('active');
+        });
+      });
+    </script>
+</body>
+</html>
